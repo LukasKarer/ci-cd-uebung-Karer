@@ -2,6 +2,7 @@ package com.example.cicd;
 
 import org.junit.jupiter.api.Test;
 import java.util.Arrays;
+import java.util.Collections;
 import java.util.List;
 
 import static org.junit.jupiter.api.Assertions.*;
@@ -21,6 +22,27 @@ class CalculatorTest {
     }
 
     @Test
+    void add_shouldHandleNegativeNumbers() {
+        Calculator c = new Calculator();
+        assertEquals(-1, c.add(2, -3));
+        assertEquals(0, c.add(-5, 5));
+    }
+
+    @Test
+    void subtract_shouldReturnDifference() {
+        Calculator c = new Calculator();
+        assertEquals(7, c.subtract(10, 3));
+        assertEquals(-7, c.subtract(3, 10));
+    }
+
+    @Test
+    void divide_shouldUseIntegerDivision() {
+        Calculator c = new Calculator();
+        assertEquals(3, c.divide(10, 3));
+        assertEquals(0, c.divide(3, 10));
+    }
+
+    @Test
     void divide_byZero_shouldReturnZero_currentBehavior() {
         Calculator c = new Calculator();
         // Aktuelles (schlechtes) Verhalten absichtlich bestätigt – Refactoring in Ü2
@@ -32,5 +54,18 @@ class CalculatorTest {
         Calculator c = new Calculator();
         List<Integer> nums = Arrays.asList(1, 2, 3, null, 4);
         assertEquals(c.sumUp(nums), c.addAll(nums));
+    }
+
+    @Test
+    void sumUp_shouldIgnoreNullValues() {
+        Calculator c = new Calculator();
+        List<Integer> nums = Arrays.asList(1, null, 2, null, 3);
+        assertEquals(6, c.sumUp(nums));
+    }
+
+    @Test
+    void addAll_emptyList_shouldReturnZero() {
+        Calculator c = new Calculator();
+        assertEquals(0, c.addAll(Collections.emptyList()));
     }
 }
