@@ -308,5 +308,9 @@ mvn -q -DskipTests=false test
 ---
 
 
+## Übung 1
+- Autor: Lukas Karer
+- Besonderheit: Ich habe vorher schon mit Git und GitHub gearbeitet, aber noch keine CI/CD-Pipeline selbst aufgesetzt. Besonders gespannt bin ich darauf, wie sich Tests und Qualitätsprüfungen automatisieren lassen.
+
 ## Ausblick
 - **Übung 2 (4.11.)**: GitHub Actions – Build & Tests automatisiert ausführen; SonarCloud integrieren.
