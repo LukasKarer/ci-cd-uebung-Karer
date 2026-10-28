@@ -16,4 +16,4 @@ Ich möchte sehen, wie eine CI/CD-Pipeline in der Praxis aufgebaut ist: von auto
 
 ## Warum ist CI/CD für mich relevant?
 
-Weil ich Builds, Tests und Deployments bisher manuell angestoßen habe – bei Mobile-Apps heißt das konkret: Release bauen, Versionsnummer setzen, Store-Upload anstoßen. CI/CD automatisiert genau diese Schritte, die dabei am meisten Zeit kosten und am leichtesten vergessen werden.
+Weil ich Builds, Tests und Deployments bisher manuell angestoßen habe – CI/CD automatisiert genau die Schritte, die dabei am meisten Zeit kosten und am leichtesten vergessen werden.
